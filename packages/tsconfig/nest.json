@@ -4,10 +4,11 @@
   "extends": "./base.json",
   "compilerOptions": {
     "target": "ES2022",
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "Node16",
+    "moduleResolution": "Node16",
     "lib": ["ES2022"],
     "outDir": "./dist",
+    "tsBuildInfoFile": "./dist/.tsbuildinfo",
     "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true

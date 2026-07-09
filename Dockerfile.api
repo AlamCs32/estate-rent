@@ -1,0 +1,31 @@
+FROM node:20-alpine AS base
+
+FROM base AS deps
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./
+COPY apps/api/package.json ./apps/api/
+COPY packages/tsconfig/package.json ./packages/tsconfig/
+COPY packages/eslint-config/package.json ./packages/eslint-config/
+COPY packages/config/package.json ./packages/config/
+COPY packages/types/package.json ./packages/types/
+COPY packages/utils/package.json ./packages/utils/
+RUN corepack enable && pnpm install --frozen-lockfile
+
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+RUN corepack enable && pnpm --filter @repo/api build
+
+FROM base AS runner
+WORKDIR /app
+RUN addgroup --system --gid 1001 nodejs && \
+    adduser --system --uid 1001 nestjs
+COPY --from=builder /app/apps/api/dist ./dist
+COPY --from=builder /app/apps/api/package.json ./
+COPY --from=builder /app/node_modules ./node_modules
+USER nestjs
+EXPOSE 3001
+ENV NODE_ENV=production
+CMD ["node", "dist/main"]

@@ -1,0 +1,12 @@
+{
+  "extends": "@repo/tsconfig/vite.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "types": ["vitest/globals"]
+  },
+  "include": ["src", "vite-env.d.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

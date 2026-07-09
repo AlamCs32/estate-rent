@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.next/
+.vite/
+coverage/
+.turbo/
+*.log
+.env
+.env.local
+.env.*.local
+*.tsbuildinfo
+.DS_Store
+*.pem
+docker-data/

@@ -1,0 +1,25 @@
+{
+  "name": "@repo/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "base.mjs",
+    "nest.mjs",
+    "vite.mjs"
+  ],
+  "exports": {
+    "./base.mjs": "./base.mjs",
+    "./nest.mjs": "./nest.mjs",
+    "./vite.mjs": "./vite.mjs"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.32.0",
+    "@typescript-eslint/parser": "^8.32.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.0.0"
+  }
+}

@@ -1,0 +1,13 @@
+node_modules
+.git
+.turbo
+dist
+.next
+.vite
+coverage
+*.log
+.env
+.env.local
+.env.*.local
+.gitignore
+README.md

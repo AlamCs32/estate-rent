@@ -6,6 +6,65 @@
       "sourceType": "github",
       "skillPath": "skills/frontend-design/SKILL.md",
       "computedHash": "93f53fd1c0352d3d7ec17b8f73d7351bf76f4821e55d123c9d2abc2c53ba48e4"
+    },
+    "material-ui-styling": {
+      "source": "mui/material-ui",
+      "sourceType": "github",
+      "skillPath": "skills/material-ui-styling/SKILL.md",
+      "computedHash": "3aee2bcb4c2ea1fcba3d97f7e43a3208bfc0d477f494d06dad22c1ec25c33ac3"
+    },
+    "material-ui-theming": {
+      "source": "mui/material-ui",
+      "sourceType": "github",
+      "skillPath": "skills/material-ui-theming/SKILL.md",
+      "computedHash": "06f09d0152bf43a8f64d170a67418e7f33ac265bc995e2fed47adb5bcc979a54"
+    },
+    "nestjs-best-practices": {
+      "source": "kadajett/agent-nestjs-skills",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "3cc2e763f1e2923cce1b5173dd9cafbb0aca8df1644102c82dde263375de1ac7"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "computedHash": "6b526d013e28073246a36f99b529bc43745d30832ecfa8217b359c34f260ca6b"
+    },
+    "typeorm-best-practices": {
+      "source": "local",
+      "sourceType": "local",
+      "skillPath": ".agents/skills/typeorm-best-practices/SKILL.md"
+    },
+    "rtk-query-patterns": {
+      "source": "local",
+      "sourceType": "local",
+      "skillPath": ".agents/skills/rtk-query-patterns/SKILL.md"
+    },
+    "zod-validation-patterns": {
+      "source": "local",
+      "sourceType": "local",
+      "skillPath": ".agents/skills/zod-validation-patterns/SKILL.md"
+    },
+    "turborepo-monorepo-patterns": {
+      "source": "local",
+      "sourceType": "local",
+      "skillPath": ".agents/skills/turborepo-monorepo-patterns/SKILL.md"
+    },
+    "docker-deployment": {
+      "source": "local",
+      "sourceType": "local",
+      "skillPath": ".agents/skills/docker-deployment/SKILL.md"
+    },
+    "nestjs-auth-jwt": {
+      "source": "local",
+      "sourceType": "local",
+      "skillPath": ".agents/skills/nestjs-auth-jwt/SKILL.md"
+    },
+    "api-design-patterns": {
+      "source": "local",
+      "sourceType": "local",
+      "skillPath": ".agents/skills/api-design-patterns/SKILL.md"
     }
   }
 }

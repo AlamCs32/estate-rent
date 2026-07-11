@@ -12,6 +12,13 @@
     ".ai/RULES.md",
     ".ai/ARCHITECTURE.md",
     ".ai/COMMANDS.md",
+    ".ai/CODING_STANDARDS.md",
+    ".ai/API_GUIDELINES.md",
+    ".ai/DATABASE_GUIDELINES.md",
+    ".ai/FRONTEND_GUIDELINES.md",
+    ".ai/SECURITY.md",
+    ".ai/STACK.md",
+    ".ai/TESTING.md",
     ".github/instructions/mui.md"
   ]
 }

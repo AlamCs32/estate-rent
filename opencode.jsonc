@@ -8,17 +8,17 @@
     }
   },
   "instructions": [
-    ".ai/AGENTS.md",
-    ".ai/RULES.md",
-    ".ai/ARCHITECTURE.md",
-    ".ai/COMMANDS.md",
-    ".ai/CODING_STANDARDS.md",
-    ".ai/API_GUIDELINES.md",
-    ".ai/DATABASE_GUIDELINES.md",
-    ".ai/FRONTEND_GUIDELINES.md",
-    ".ai/SECURITY.md",
-    ".ai/STACK.md",
-    ".ai/TESTING.md",
+    ".agents/docs/AGENTS.md",
+    ".agents/docs/RULES.md",
+    ".agents/docs/ARCHITECTURE.md",
+    ".agents/docs/COMMANDS.md",
+    ".agents/docs/CODING_STANDARDS.md",
+    ".agents/docs/API_GUIDELINES.md",
+    ".agents/docs/DATABASE_GUIDELINES.md",
+    ".agents/docs/FRONTEND_GUIDELINES.md",
+    ".agents/docs/SECURITY.md",
+    ".agents/docs/STACK.md",
+    ".agents/docs/TESTING.md",
     ".github/instructions/mui.md"
   ]
 }

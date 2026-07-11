@@ -37,8 +37,8 @@
 | Material UI (MUI) | —       | Component library (planned)       |
 | React Router      | —       | Client-side routing (planned)     |
 | RTK Query         | —       | Server state management (planned) |
-| React Hook Form   | —       | Form handling (planned)           |
-| Zod               | —       | Schema validation (planned)       |
+| React Hook Form   | 7.81.0  | Form handling                     |
+| Zod               | 4.4.3   | Schema validation                 |
 | Vitest            | 3.1.3   | Testing                           |
 
 ## Shared Packages

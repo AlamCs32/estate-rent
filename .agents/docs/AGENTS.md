@@ -4,7 +4,7 @@ You are an AI coding assistant working on the EstateRent monorepo. This document
 
 ## Core Principles
 
-1. **Read first, act second.** Before modifying any file, read the relevant source files and context documents in `.ai/`.
+1. **Read first, act second.** Before modifying any file, read the relevant source files and context documents in `.agents/docs/`.
 2. **Follow existing patterns.** Every file in this repo follows conventions. Match them exactly.
 3. **Reuse before building.** Check shared packages (`@repo/types`, `@repo/utils`, `@repo/ui`, `@repo/config`) before creating new code.
 4. **No placeholders.** Every function, component, and module must be fully implemented. No `// TODO`, `// FIXME`, or stub code.

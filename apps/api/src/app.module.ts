@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { HealthModule } from './health/health.module';
 import { EstatesModule } from './estates/estates.module';
+import { LoggerModule } from './logger/logger.module';
 
 @Module({
   imports: [
@@ -11,6 +12,7 @@ import { EstatesModule } from './estates/estates.module';
       isGlobal: true,
       envFilePath: ['.env.local', '.env'],
     }),
+    LoggerModule,
     HealthModule,
     EstatesModule,
   ],

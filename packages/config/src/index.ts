@@ -26,6 +26,16 @@ export const config = {
   },
   database: {
     url: process.env.DATABASE_URL ?? 'postgresql://localhost:5432/estate_rent',
+    host: process.env.DB_HOST ?? 'localhost',
+    port: parseInt(process.env.DB_PORT ?? '5432', 10),
+    username: process.env.DB_USERNAME ?? 'postgres',
+    password: process.env.DB_PASSWORD ?? 'postgres',
+    database: process.env.DB_NAME ?? 'estate_rent',
+    ssl: parseBool(process.env.DB_SSL, false),
+    poolSize: parseInt(process.env.DB_POOL_SIZE ?? '10', 10),
+    logging: process.env.DB_LOGGING === 'true',
+    synchronize: process.env.DB_SYNCHRONIZE === 'true',
+    migrationsRun: process.env.DB_MIGRATIONS_RUN === 'true',
   },
   logger: {
     level: process.env.LOG_LEVEL ?? 'info',

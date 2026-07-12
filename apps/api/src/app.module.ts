@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { HealthModule } from './health/health.module';
 import { EstatesModule } from './estates/estates.module';
 import { LoggerModule } from './logger/logger.module';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { LoggerModule } from './logger/logger.module';
       envFilePath: ['.env.local', '.env'],
     }),
     LoggerModule,
+    DatabaseModule,
     HealthModule,
     EstatesModule,
   ],

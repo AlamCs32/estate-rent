@@ -21,10 +21,13 @@ The API is a NestJS 11 application configured with:
 
 ### Estates Module (`src/estates/`)
 
-- `GET /api/estates?page=1&limit=10` — Paginated estate list
+- `GET /api/estates` — Paginated estate list with search, price range, location filters
 - `GET /api/estates/:id` — Single estate by ID
-- Currently uses mock data (`estates.service.ts` hardcoded array)
-- TypeORM integration is planned — entities will replace mock data
+- `POST /api/estates` — Create estate
+- `PATCH /api/estates/:id` — Update estate
+- `DELETE /api/estates/:id` — Delete estate
+- Uses `EstateEntity` (TypeORM) with `EstatesRepository` and `EstatesService`
+- DTOs: `CreateEstateDto`, `UpdateEstateDto`, `QueryEstateDto` with class-validator
 
 ### Logger Module (`src/logger/`)
 
@@ -45,13 +48,37 @@ The API is a NestJS 11 application configured with:
 - **Bookings Module**: Booking CRUD, availability checking
 - **Images Module**: Image upload and management
 
+### Database Module (`src/database/`)
+
+- `DatabaseModule` — Global module that configures TypeORM via `forRootAsync`
+- Reads all settings from `@repo/config` (host, port, credentials, pool, SSL)
+- Uses `autoLoadEntities: true` so feature modules register entities via `TypeOrmModule.forFeature()`
+- Retry logic: 3 attempts with 3s delay
+- Migrations disabled by default in dev (`DB_SYNCHRONIZE=true`)
+
+### Base Entity (`src/common/entities/base.entity.ts`)
+
+Abstract class with `id` (UUID), `createdAt`, `updatedAt` — all entities extend it.
+
 ## Environment Variables
 
 ```env
 NODE_ENV=development
 PORT=3001
-DATABASE_URL=postgresql://user:password@localhost:5432/estate_rent
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/estate_rent
 CORS_ORIGIN=http://localhost:5173
+
+# Database
+DB_HOST=localhost
+DB_PORT=5432
+DB_USERNAME=postgres
+DB_PASSWORD=postgres
+DB_NAME=estate_rent
+DB_SSL=false
+DB_POOL_SIZE=10
+DB_LOGGING=false
+DB_SYNCHRONIZE=true
+DB_MIGRATIONS_RUN=false
 
 # Logger
 LOG_LEVEL=debug
@@ -81,17 +108,14 @@ LOG_REDACT_BODY=password,token,refreshToken,accessToken,apiKey,secret,otp
 | @nestjs/config           | ✅ Installed                     |
 | @nestjs/platform-express | ✅ Installed (→ Fastify planned) |
 | @nestjs/swagger          | ❌ Planned                       |
-| @nestjs/throttler        | ❌ Planned                       |
-| @nestjs/jwt              | ❌ Planned                       |
-| @nestjs/passport         | ❌ Planned                       |
-| typeorm                  | ❌ Planned                       |
-| @nestjs/typeorm          | ❌ Planned                       |
-| pg                       | ❌ Planned                       |
-| class-validator          | ❌ Planned                       |
-| class-transformer        | ❌ Planned                       |
 | pino                     | ✅ Installed                     |
 | pino-pretty              | ✅ Installed                     |
 | pino-roll                | ✅ Installed                     |
+| typeorm                  | ✅ Installed                     |
+| @nestjs/typeorm          | ✅ Installed                     |
+| pg                       | ✅ Installed                     |
+| class-validator          | ✅ Installed                     |
+| class-transformer        | ✅ Installed                     |
 
 ## Test Setup
 

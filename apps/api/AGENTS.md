@@ -12,6 +12,7 @@ You are working in `apps/api/` — the NestJS backend for EstateRent. This is a 
 | `src/app.module.ts`  | Root module — imports all feature modules              |
 | `src/<feature>/`     | Feature modules (estates, bookings, users, auth)       |
 | `src/health/`        | Health check module (simple, no DB)                    |
+| `src/logger/`        | Logger module (Pino, global, DI-driven)                |
 | `test/jest-e2e.json` | E2E test configuration                                 |
 | `nest-cli.json`      | NestJS CLI config (source root, compiler options)      |
 
@@ -31,6 +32,8 @@ You are working in `apps/api/` — the NestJS backend for EstateRent. This is a 
 import { config } from '@repo/config'; // Runtime configuration
 import { Estate, Booking, User } from '@repo/types'; // Shared types
 import { formatCurrency, formatDate } from '@repo/utils'; // Shared utilities
+import { LoggerService } from '@/logger/logger.service'; // Pino logger (DI)
+import { RequestContextService } from '@/logger/request-context.service'; // AsyncLocalStorage
 ```
 
 ## Testing

@@ -27,6 +27,9 @@
 | @nestjs/swagger   | —       | API documentation (planned)     |
 | class-validator   | —       | DTO validation (planned)        |
 | class-transformer | —       | Object transformation (planned) |
+| pino              | 10.3.1  | Structured logging engine       |
+| pino-pretty       | 13.1.3  | Dev console pretty-print        |
+| pino-roll         | 4.0.0   | File rotation transport         |
 
 ## Frontend (`apps/web`)
 

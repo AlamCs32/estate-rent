@@ -14,8 +14,8 @@ export const dataSourceOptions: DataSourceOptions = {
   poolSize: config.database.poolSize,
   synchronize: false,
   logging: config.database.logging,
-  entities: [join(__dirname, '..', '**', '*.entity.{ts,js}')],
-  migrations: [join(__dirname, '..', 'migrations', '*.{ts,js}')],
+  entities: [join(__dirname, '..', '..', '**', '*.entity.{ts,js}')],
+  migrations: [join(__dirname, 'migrations', '*.{ts,js}')],
 };
 
 const dataSource = new DataSource(dataSourceOptions);

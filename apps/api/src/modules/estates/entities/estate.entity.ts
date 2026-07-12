@@ -1,5 +1,5 @@
 import { Entity, Column, Index } from 'typeorm';
-import { BaseEntity } from '@/common/entities/base.entity';
+import { BaseEntity } from '@/shared/base/base.entity';
 
 @Entity('estates')
 @Index('idx_estates_price', ['price'])

@@ -1,5 +1,5 @@
 import type { DataSource } from 'typeorm';
-import { EstateEntity } from '@/estates/entities/estate.entity';
+import { EstateEntity } from '@/modules/estates/entities/estate.entity';
 
 export async function seedEstates(dataSource: DataSource): Promise<void> {
   const repo = dataSource.getRepository(EstateEntity);

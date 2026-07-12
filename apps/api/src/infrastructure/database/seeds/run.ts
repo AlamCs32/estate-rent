@@ -1,4 +1,4 @@
-import dataSource from '@/database/data-source';
+import dataSource from '@/infrastructure/database/data-source';
 import { seedEstates } from './estates.seed';
 
 async function run(): Promise<void> {

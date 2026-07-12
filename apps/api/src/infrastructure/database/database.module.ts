@@ -20,7 +20,7 @@ import { join } from 'node:path';
         migrationsRun: config.database.migrationsRun,
         logging: config.database.logging,
         autoLoadEntities: true,
-        migrations: [join(__dirname, '..', 'migrations', '*.{ts,js}')],
+        migrations: [join(__dirname, 'migrations', '*.{ts,js}')],
         retryAttempts: 3,
         retryDelay: 3000,
       }),

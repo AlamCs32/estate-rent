@@ -2,9 +2,9 @@ import { NestFactory } from '@nestjs/core';
 import { ValidationPipe } from '@nestjs/common';
 import { AppModule } from './app.module';
 import { config } from '@repo/config';
-import { LoggerService } from './logger/logger.service';
-import { LoggerInterceptor } from './logger/logger.interceptor';
-import { LoggerExceptionFilter } from './logger/logger.filter';
+import { LoggerService } from './infrastructure/logging/logger.service';
+import { LoggerInterceptor } from './infrastructure/logging/logger.interceptor';
+import { LoggerExceptionFilter } from './infrastructure/logging/logger.filter';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {

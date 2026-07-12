@@ -56,7 +56,10 @@ import { RequestContextService } from '@/logger/request-context.service'; // Asy
 ### Add a migration
 
 ```bash
-pnpm --filter @repo/api typeorm migration:create ./src/migrations/<Name>
+pnpm --filter @repo/api migration:create ./src/migrations/<Name>
+pnpm --filter @repo/api migration:generate
+pnpm --filter @repo/api migration:run
+pnpm --filter @repo/api seed
 ```
 
 Never use `synchronize: true` in production.

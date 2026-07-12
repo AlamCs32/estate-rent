@@ -59,10 +59,12 @@ pnpm turbo clean --daemon             # Clear Turbo cache if corrupted
 ## TypeORM Migrations
 
 ```bash
-pnpm --filter @repo/api typeorm migration:create ./src/migrations/<Name>
-pnpm --filter @repo/api typeorm migration:run
-pnpm --filter @repo/api typeorm migration:revert
-pnpm --filter @repo/api typeorm schema:sync  # Dev only — sync without migration
+pnpm --filter @repo/api migration:create ./src/migrations/<Name>  # Create a new migration file
+pnpm --filter @repo/api migration:generate                        # Auto-generate from entities
+pnpm --filter @repo/api migration:run                             # Run pending migrations
+pnpm --filter @repo/api migration:revert                          # Revert last migration
+pnpm --filter @repo/api schema:sync                               # Dev only — sync without migration
+pnpm --filter @repo/api seed                                      # Seed database
 ```
 
 ## Database

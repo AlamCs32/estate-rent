@@ -17,19 +17,20 @@
 
 ## Backend (`apps/api`)
 
-| Library           | Version | Purpose                         |
-| ----------------- | ------- | ------------------------------- |
-| NestJS            | 11.1.0  | Application framework           |
-| Fastify           | —       | HTTP adapter (planned)          |
-| TypeORM           | —       | ORM (planned)                   |
-| PostgreSQL        | 16      | Database                        |
-| @nestjs/config    | 4.0.0   | Environment configuration       |
-| @nestjs/swagger   | —       | API documentation (planned)     |
-| class-validator   | —       | DTO validation (planned)        |
-| class-transformer | —       | Object transformation (planned) |
-| pino              | 10.3.1  | Structured logging engine       |
-| pino-pretty       | 13.1.3  | Dev console pretty-print        |
-| pino-roll         | 4.0.0   | File rotation transport         |
+| Library           | Version | Purpose                     |
+| ----------------- | ------- | --------------------------- |
+| NestJS            | 11.1.0  | Application framework       |
+| Fastify           | —       | HTTP adapter (planned)      |
+| TypeORM           | 1.0.0   | ORM                         |
+| PostgreSQL        | 16      | Database                    |
+| @nestjs/config    | 4.0.0   | Environment configuration   |
+| @nestjs/swagger   | —       | API documentation (planned) |
+| @nestjs/typeorm   | 11.0.3  | TypeORM NestJS integration  |
+| class-validator   | 0.15.1  | DTO validation              |
+| class-transformer | 0.5.1   | Object transformation       |
+| pino              | 10.3.1  | Structured logging engine   |
+| pino-pretty       | 13.1.3  | Dev console pretty-print    |
+| pino-roll         | 4.0.0   | File rotation transport     |
 
 ## Frontend (`apps/web`)
 
